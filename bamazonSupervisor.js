@@ -45,10 +45,7 @@ function viewlistofDepts () {
   var query = "SELECT * FROM departments";
   connection.query(query, function (err, res) {
     if (err) throw (err);
-    //for (var i=0; i<res.length; i++) {
-      //console.log('Dept ID: ' + res[i].department_id, ' || Dept Name: '+ res[i].department_name, ' || Dept Overhead Costs: ' + res[i].over_head_costs)
       console.table(res)
-    //};//end of for loop
   supervisorWork();
   });//end of query callback function
 };//end of viewlistofDepts()
